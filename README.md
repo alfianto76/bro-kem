@@ -56,6 +56,14 @@ Example movie object:
 
 ```bash
 docker compose up --build
+```
+
+The Compose service exposes port `5376` to Coolify's proxy without binding it
+directly on the Docker host. For a direct local test, run:
+
+```bash
+docker build -t authorized-movie-catalog-api .
+docker run --rm -p 5376:5376 authorized-movie-catalog-api
 curl http://localhost:5376/health
 ```
 

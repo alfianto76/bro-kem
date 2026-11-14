@@ -13,5 +13,5 @@ services:
       SCRAPER_ITEM_SELECTOR: ${SCRAPER_ITEM_SELECTOR:-article}
       SCRAPER_TIMEOUT_MS: ${SCRAPER_TIMEOUT_MS:-10000}
       CACHE_TTL_SECONDS: ${CACHE_TTL_SECONDS:-300}
-    ports:
-      - "5376:5376"
+    expose:
+      - "5376"
